@@ -1,0 +1,54 @@
+[
+    {
+        "id": 0,
+        "category": "Metric",
+        "items": [
+            {
+                "id": 0,
+                "unitName": "milliliter",
+                "ratio": 1.0
+            },
+            {
+                "id": 1,
+                "unitName": "liter",
+                "ratio": 1000.0
+            },
+            {
+                "id": 2,
+                "unitName": "cubic meter",
+                "ratio": 1000000.0
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "category": "English",
+        "items": [
+            {
+                "id": 0,
+                "unitName": "cubic inch",
+                "ratio": 1.0
+            },
+            {
+                "id": 1,
+                "unitName": "cubic foot",
+                "ratio": 1728.0
+            },
+            {
+                "id": 2,
+                "unitName": "cubic yard",
+                "ratio": 46656.0
+            },
+            {
+                "id": 3,
+                "unitName": "pint",
+                "ratio": 28.875
+            },
+            {
+                "id": 4,
+                "unitName": "gallon",
+                "ratio": 231.0
+            }
+        ]        
+    }
+]

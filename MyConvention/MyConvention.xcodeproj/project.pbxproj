@@ -12,6 +12,7 @@
 		BFA628702670E16400FD6661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA6286F2670E16400FD6661 /* Assets.xcassets */; };
 		BFA628732670E16400FD6661 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA628722670E16400FD6661 /* Preview Assets.xcassets */; };
 		BFA6287A2670EF5C00FD6661 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA628792670EF5C00FD6661 /* Units.swift */; };
+		BFA628822671044500FD6661 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA628812671044500FD6661 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,10 @@
 		BFA6286F2670E16400FD6661 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFA628722670E16400FD6661 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BFA628792670EF5C00FD6661 /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
+		BFA6287B2670FEA200FD6661 /* EnglishUnits.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EnglishUnits.json; sourceTree = "<group>"; };
+		BFA6287C2671003800FD6661 /* MetricUnits.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MetricUnits.json; sourceTree = "<group>"; };
+		BFA6287D2671025100FD6661 /* AllUnits.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AllUnits.json; sourceTree = "<group>"; };
+		BFA628812671044500FD6661 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +60,8 @@
 			children = (
 				BFA6286B2670E16300FD6661 /* MyConventionApp.swift */,
 				BFA6286D2670E16300FD6661 /* ContentView.swift */,
-				BFA628792670EF5C00FD6661 /* Units.swift */,
+				BFA628802671040B00FD6661 /* Models */,
+				BFA6287E267103A600FD6661 /* Jsons */,
 				BFA6286F2670E16400FD6661 /* Assets.xcassets */,
 				BFA628712670E16400FD6661 /* Preview Content */,
 			);
@@ -68,6 +74,25 @@
 				BFA628722670E16400FD6661 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BFA6287E267103A600FD6661 /* Jsons */ = {
+			isa = PBXGroup;
+			children = (
+				BFA6287B2670FEA200FD6661 /* EnglishUnits.json */,
+				BFA6287D2671025100FD6661 /* AllUnits.json */,
+				BFA6287C2671003800FD6661 /* MetricUnits.json */,
+			);
+			path = Jsons;
+			sourceTree = "<group>";
+		};
+		BFA628802671040B00FD6661 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BFA628792670EF5C00FD6661 /* Units.swift */,
+				BFA628812671044500FD6661 /* Data.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +168,7 @@
 				BFA6286E2670E16300FD6661 /* ContentView.swift in Sources */,
 				BFA6287A2670EF5C00FD6661 /* Units.swift in Sources */,
 				BFA6286C2670E16300FD6661 /* MyConventionApp.swift in Sources */,
+				BFA628822671044500FD6661 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

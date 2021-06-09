@@ -1,0 +1,18 @@
+[
+    {
+        "id": 0,
+        "unitName": "milliliter",
+        "ratio": 1.0
+    },
+    {
+        "id": 1,
+        "unitName": "liter",
+        "ratio": 1000.0
+    },
+    {
+        "id": 2,
+        "unitName": "cubic meter",
+        "ratio": 1000000.0
+    }
+]
+
