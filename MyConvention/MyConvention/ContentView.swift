@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isMetric2English = true
     @State private var input = ""
     @State private var output = ""
+    
+    var inArray: [VolumeUnit] {
+        return isMetric2English ? MetricUnits : EnglishUnits
+    }
+    var outArray: [VolumeUnit] {
+        return isMetric2English ? EnglishUnits : MetricUnits
+    }
     var body: some View {
         NavigationView {
             Form {
