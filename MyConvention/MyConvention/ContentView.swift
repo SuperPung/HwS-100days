@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
     @State private var isMetric2English = true
     @State private var input = ""
-    @State private var output = ""
     @State private var inIndex = 0
     @State private var outIndex = 0
     
@@ -28,9 +27,9 @@ struct ContentView: View {
         let outRate = outArray[outIndex].ratio
         
         let inNum = Double(input) ?? 0
-        let rate = isMetric2English ? 1/28316.8466 : 28316.8466
+        let rate = isMetric2English ? 0.0610237441 : 1/0.0610237441
         
-        outNum = inNum * inRate * inNum * rate / outRate
+        outNum = inNum * inRate * rate / outRate
         return outNum
     }
     
@@ -45,16 +44,16 @@ struct ContentView: View {
                 .foregroundColor(.white)
                 .background(Color(.black))
                 .cornerRadius(CGFloat(10.0))
-                .shadow(radius: CGFloat(15.0))
+                .shadow(radius: CGFloat(5.0))
                 
                 Form {
-                    Section (header: Text("将 \(isMetric2English ? "公制" : "英制")")
-                                .font(.subheadline).bold()
+                    Section (header: Text("将\(isMetric2English ? "公制" : "英制")")
+                                .font(.subheadline)
                     ){
                         TextField("输入\(isMetric2English ? "公制" : "英制")容积", text: $input)
                             .frame(maxWidth: .infinity)
                             .keyboardType(.decimalPad)
-                        
+
                         Picker("", selection: $inIndex) {
                             ForEach(0 ..< inArray.count) {index in
                                 Text(self.inArray[index].unitName)
@@ -62,9 +61,9 @@ struct ContentView: View {
                         }
                         .pickerStyle(SegmentedPickerStyle())
                     }
-                    
-                    Section (header: Text("转换为 \(!isMetric2English ? "公制" : "英制")")
-                                .font(.subheadline).bold()
+
+                    Section (header: Text("转换为\(!isMetric2English ? "公制" : "英制")")
+                                .font(.subheadline)
                     ){
                         Text("单位")
                         Picker("", selection: $outIndex) {
@@ -74,9 +73,10 @@ struct ContentView: View {
                         }
                         .pickerStyle(SegmentedPickerStyle())
                     }
+                    
                     Section (header: Text("结果")
-                                .font(.subheadline).bold()
-                    ) {
+                                .font(.subheadline)
+                    ){
                         Text("\(result, specifier: "%.2f")")
                     }
                 }
