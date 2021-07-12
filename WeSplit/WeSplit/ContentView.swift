@@ -57,6 +57,7 @@ struct ContentView: View {
                 
                 Section(header: Text("Amount")) {
                     Text("Total amount: $\(grandTotal, specifier: "%.2f")")
+                        .foregroundColor((tipPercentage == 4) ? .red : .primary)
                     Text("Amount per person: $\(totalPerPerson, specifier: "%.2f")")
                 }
                 .padding()
