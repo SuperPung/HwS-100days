@@ -41,6 +41,7 @@ extension View {
         self.modifier(Watermark(text: text))
     }
 }
+
 struct GridStack<Content: View>: View {
     let rows: Int
     let columns: Int
