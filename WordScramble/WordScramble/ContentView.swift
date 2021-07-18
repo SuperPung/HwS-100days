@@ -17,6 +17,8 @@ struct ContentView: View {
     @State private var errorMessage = ""
     @State private var showingError = false
     
+    @State private var score = 0
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -31,6 +33,12 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle(rootWord)
+            .navigationBarItems(leading:
+                Button(action: startGame) {
+                    Text("Reset")
+                }, trailing:
+                    Text("Your score is \(score)")
+            )
             .onAppear(perform: startGame)
             .alert(isPresented: $showingError) {
                 Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
@@ -60,11 +68,21 @@ struct ContentView: View {
             return
         }
         
+        guard isPermit(word: answer) else {
+            wordError(title: "Word not permitted", message: "You cannot enter a word less than 3 or the same word as the root word.")
+            return
+        }
+        
         usedWords.insert(answer, at: 0)
         newWord = ""
+        
+        score += answer.count
     }
     
     func startGame() {
+        score = 0
+        usedWords = []
+        
         if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
             if let startWords = try? String(contentsOf: startWordsURL) {
                 let allWords = startWords.components(separatedBy: "\n")
@@ -100,6 +118,10 @@ struct ContentView: View {
         let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
         
         return misspelledRange.location == NSNotFound
+    }
+    
+    func isPermit(word: String) -> Bool {
+        word.count > 3 && word != rootWord
     }
     
     func wordError(title: String, message: String) {
