@@ -7,31 +7,31 @@
 
 import SwiftUI
 
+struct User: Codable {
+    var firstName: String
+    var lastName: String
+}
+
 struct ContentView: View {
-    @State private var numbers = [Int]()
-    @State private var currentNumber = 1
+    @State private var tapCount = UserDefaults.standard.integer(forKey: "Tap")
+    @State private var user = User(firstName: "Taylor", lastName: "Swift")
     
     var body: some View {
-        NavigationView {
-            VStack {
-                List {
-                    ForEach(numbers, id: \.self) {
-                        Text("\($0)")
-                    }
-                    .onDelete(perform: removeRows)
-                }
+        VStack {
+            Button("Tap count: \(tapCount)") {
+                self.tapCount += 1
+                UserDefaults.standard.set(self.tapCount, forKey: "Tap")
+            }
+            
+            Button("Save User") {
+                let encoder = JSONEncoder()
                 
-                Button("Add number") {
-                    self.numbers.append(self.currentNumber)
-                    self.currentNumber += 1
+                if let data = try? encoder.encode(self.user) {
+                    UserDefaults.standard.set(data, forKey: "UserData")
                 }
             }
-            .navigationBarItems(leading: EditButton())
         }
-    }
-    
-    func removeRows(at offsets: IndexSet) {
-        numbers.remove(atOffsets: offsets)
+        
     }
 }
 
