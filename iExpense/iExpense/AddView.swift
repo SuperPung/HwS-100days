@@ -12,7 +12,12 @@ struct AddView: View {
     @State private var type = "Personal"
     @State private var amount = ""
     
+    @State private var showingAlert = false
+    @State private var alertTitle = ""
+    @State private var alertMessage = ""
+    
     @ObservedObject var expenses: Expenses
+    @Environment(\.presentationMode) var presentationMode
     
     static let types = ["Business", "Personal"]
     
@@ -33,9 +38,21 @@ struct AddView: View {
                 if let acturalAmount = Int(self.amount) {
                     let item = ExpenseItem(name: self.name, type: self.type, amount: acturalAmount)
                     self.expenses.items.append(item)
+                    self.presentationMode.wrappedValue.dismiss()
+                } else {
+                    self.amountError()
                 }
             })
         }
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+        }
+    }
+    
+    func amountError() {
+        alertTitle = "Invalid Amount input"
+        alertMessage = "Please enter a number in Amount."
+        showingAlert = true
     }
 }
 
