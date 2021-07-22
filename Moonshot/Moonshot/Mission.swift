@@ -35,4 +35,17 @@ struct Mission: Codable, Identifiable {
             return "N/A"
         }
     }
+    
+    var formattedCrewName: String {
+        var res = ""
+        
+        for index in 0 ..< crew.count {
+            res.append(crew[index].name)
+            if (index < crew.count - 1) {
+                res.append(", ")
+            }
+        }
+        
+        return res
+    }
 }
