@@ -30,7 +30,7 @@ class Order: ObservableObject, Codable {
     @Published var zip = ""
     
     var hasValidAddress: Bool {
-        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
+        if name.isEmpty || streetAddress.isBlank || city.isEmpty || zip.isEmpty {
             return false
         }
         
@@ -84,4 +84,11 @@ class Order: ObservableObject, Codable {
     }
     
     init() {}
+}
+
+extension String {
+    var isBlank: Bool {
+        let trimmedStr = self.trimmingCharacters(in: .whitespacesAndNewlines)
+        return trimmedStr.isEmpty
+    }
 }
