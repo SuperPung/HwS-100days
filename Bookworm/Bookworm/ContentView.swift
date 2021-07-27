@@ -8,30 +8,68 @@
 import SwiftUI
 import CoreData
 
+struct PushButton: View {
+    let title: String
+    @Binding var isOn: Bool
+    
+    var onColors = [Color.red, Color.yellow]
+    var offColors = [Color(white: 0.6), Color(white: 0.4)]
+    
+    var body: some View {
+        Button(title) {
+            self.isOn.toggle()
+        }
+        .padding()
+        .background(LinearGradient(gradient: Gradient(colors: isOn ? onColors : offColors), startPoint: .top, endPoint: .bottom))
+        .foregroundColor(.white)
+        .clipShape(Capsule())
+        .shadow(radius: isOn ? 0 : 5)
+    }
+}
+
 struct ContentView: View {
+    @State private var rememberMe = false
+    @Environment(\.horizontalSizeClass) var sizeClass
+    
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
+    
+//    @FetchRequest(entity: Student.entity(), sortDescriptors: []) var students: FetchRequest<Student>
+    
     private var items: FetchedResults<Item>
 
     var body: some View {
-        List {
-            ForEach(items) { item in
-                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+        if sizeClass == .compact {
+            return AnyView(VStack {
+                Text("Active size class:")
+                Text("COMPACT")
             }
-            .onDelete(perform: deleteItems)
-        }
-        .toolbar {
-            #if os(iOS)
-            EditButton()
-            #endif
-
-            Button(action: addItem) {
-                Label("Add Item", systemImage: "plus")
+            .font(.largeTitle))
+        } else {
+            return AnyView(HStack {
+                Text("Active size class:")
+                Text("REGULAR")
             }
+            .font(.largeTitle))
         }
+//        List {
+//            ForEach(items) { item in
+//                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+//            }
+//            .onDelete(perform: deleteItems)
+//        }
+//        .toolbar {
+//            #if os(iOS)
+//            EditButton()
+//            #endif
+//
+//            Button(action: addItem) {
+//                Label("Add Item", systemImage: "plus")
+//            }
+//        }
     }
 
     private func addItem() {
