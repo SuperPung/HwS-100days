@@ -17,6 +17,7 @@
 		BFC2CE7626B1576F003C59F0 /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC2CE7426B1576F003C59F0 /* Movie+CoreDataProperties.swift */; };
 		BFC2CE7926B2AA1F003C59F0 /* Singer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC2CE7726B2AA1F003C59F0 /* Singer+CoreDataClass.swift */; };
 		BFC2CE7A26B2AA1F003C59F0 /* Singer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC2CE7826B2AA1F003C59F0 /* Singer+CoreDataProperties.swift */; };
+		BFC2CE7C26B2D6D1003C59F0 /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC2CE7B26B2D6D1003C59F0 /* FilteredList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		BFC2CE7426B1576F003C59F0 /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BFC2CE7726B2AA1F003C59F0 /* Singer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BFC2CE7826B2AA1F003C59F0 /* Singer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BFC2CE7B26B2D6D1003C59F0 /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				BFC2CE7426B1576F003C59F0 /* Movie+CoreDataProperties.swift */,
 				BFC2CE5F26B1436A003C59F0 /* CoreDataProjectApp.swift */,
 				BFC2CE6126B1436A003C59F0 /* ContentView.swift */,
+				BFC2CE7B26B2D6D1003C59F0 /* FilteredList.swift */,
 				BFC2CE6326B1436B003C59F0 /* Assets.xcassets */,
 				BFC2CE6826B1436B003C59F0 /* Persistence.swift */,
 				BFC2CE6D26B1436B003C59F0 /* Info.plist */,
@@ -158,6 +161,7 @@
 			files = (
 				BFC2CE7926B2AA1F003C59F0 /* Singer+CoreDataClass.swift in Sources */,
 				BFC2CE6926B1436B003C59F0 /* Persistence.swift in Sources */,
+				BFC2CE7C26B2D6D1003C59F0 /* FilteredList.swift in Sources */,
 				BFC2CE6226B1436A003C59F0 /* ContentView.swift in Sources */,
 				BFC2CE6C26B1436B003C59F0 /* CoreDataProject.xcdatamodeld in Sources */,
 				BFC2CE7526B1576F003C59F0 /* Movie+CoreDataClass.swift in Sources */,

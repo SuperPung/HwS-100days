@@ -10,41 +10,36 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
+    @State private var lastNameFilter = "A"
     
     @FetchRequest(entity: Ship.entity(), sortDescriptors: [], predicate: NSPredicate(format: "universe == %@", "Star Wars")) var ships: FetchedResults<Ship>
 
     var body: some View {
         VStack {
-            List(ships, id: \.self) { ship in
-                Text(ship.name ?? "Unknown name")
-            }
+            FilteredList(filter: lastNameFilter)
             
             Button("Add Examples") {
-                let ship1 = Ship(context: self.moc)
-                ship1.name = "Enterprise"
-                ship1.universe = "Star Trek"
-
-                let ship2 = Ship(context: self.moc)
-                ship2.name = "Defiant"
-                ship2.universe = "Star Trek"
-
-                let ship3 = Ship(context: self.moc)
-                ship3.name = "Millennium Falcon"
-                ship3.universe = "Star Wars"
-
-                let ship4 = Ship(context: self.moc)
-                ship4.name = "Executor"
-                ship4.universe = "Star Wars"
-
+                let taylor = Singer(context: self.moc)
+                taylor.firstName = "Taylor"
+                taylor.lastName = "Swift"
+                
+                let ed = Singer(context: self.moc)
+                ed.firstName = "Ed"
+                ed.lastName = "Sheeran"
+                
+                let adele = Singer(context: self.moc)
+                adele.firstName = "Adele"
+                adele.lastName = "Adkins"
+                
                 try? self.moc.save()
             }
             
-            Button("Save") {
-                do {
-                    try self.moc.save()
-                } catch {
-                    print(error.localizedDescription)
-                }
+            Button("Show A") {
+                self.lastNameFilter = "A"
+            }
+            
+            Button("Show S") {
+                self.lastNameFilter = "S"
             }
         }
     }
