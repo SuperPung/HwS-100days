@@ -11,6 +11,7 @@
 		BFC2CE9426B7D16E003C59F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC2CE9326B7D16E003C59F0 /* ContentView.swift */; };
 		BFC2CE9626B7D170003C59F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC2CE9526B7D170003C59F0 /* Assets.xcassets */; };
 		BFC2CE9926B7D170003C59F0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC2CE9826B7D170003C59F0 /* Preview Assets.xcassets */; };
+		BFC2CEA126B7D832003C59F0 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC2CEA026B7D832003C59F0 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		BFC2CE9526B7D170003C59F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFC2CE9826B7D170003C59F0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BFC2CE9A26B7D170003C59F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFC2CEA026B7D832003C59F0 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				BFC2CE9126B7D16E003C59F0 /* UserFriendsApp.swift */,
 				BFC2CE9326B7D16E003C59F0 /* ContentView.swift */,
+				BFC2CEA026B7D832003C59F0 /* DetailView.swift */,
 				BFC2CE9526B7D170003C59F0 /* Assets.xcassets */,
 				BFC2CE9A26B7D170003C59F0 /* Info.plist */,
 				BFC2CE9726B7D170003C59F0 /* Preview Content */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFC2CE9426B7D16E003C59F0 /* ContentView.swift in Sources */,
+				BFC2CEA126B7D832003C59F0 /* DetailView.swift in Sources */,
 				BFC2CE9226B7D16E003C59F0 /* UserFriendsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
