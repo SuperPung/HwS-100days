@@ -8,9 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showingActionSheet = false
+    @State private var backgroundColor = Color.white
+    @State private var image: Image?
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            image?
+                .resizable()
+                .scaledToFit()
+        }
+        .onAppear(perform: loadImage)
+    }
+    
+    func loadImage() {
+        image = Image("Example")
     }
 }
 
