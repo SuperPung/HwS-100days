@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import CoreImage
+import CoreImage.CIFilterBuiltins
 
 struct ContentView: View {
     @State private var showingActionSheet = false
     @State private var backgroundColor = Color.white
     @State private var image: Image?
+    @State private var selectedDate = Date()
     
     var body: some View {
         VStack {
@@ -22,7 +25,30 @@ struct ContentView: View {
     }
     
     func loadImage() {
-        image = Image("Example")
+        guard let inputImage = UIImage(named: "Example") else { return }
+        let beginImage = CIImage(image: inputImage)
+        
+        let context = CIContext()
+//        let currentFilter = CIFilter.sepiaTone()
+//        let currentFilter = CIFilter.pixellate()
+//        let currentFilter = CIFilter.crystallize()
+        guard let currentFilter = CIFilter(name: "CITwirlDistortion") else { return }
+        currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+        currentFilter.setValue(2000, forKey: kCIInputRadiusKey)
+        currentFilter.setValue(CIVector(x: inputImage.size.width / 2, y: inputImage.size.height / 2), forKey: kCIInputCenterKey)
+        
+//        currentFilter.inputImage = beginImage
+//        currentFilter.intensity = 1
+//        currentFilter.scale = 100
+//        currentFilter.radius = 200
+        
+        guard let outputImage = currentFilter.outputImage else { return }
+        
+        if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
+            let uiImage = UIImage(cgImage: cgimg)
+            
+            image = Image(uiImage: uiImage)
+        }
     }
 }
 
