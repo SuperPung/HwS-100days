@@ -12,6 +12,7 @@
 		BF25003126B912B20029C439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF25003026B912B20029C439 /* Assets.xcassets */; };
 		BF25003426B912B20029C439 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF25003326B912B20029C439 /* Preview Assets.xcassets */; };
 		BF25003C26BA7E200029C439 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25003B26BA7E200029C439 /* ImagePicker.swift */; };
+		BF25003E26BC3F9C0029C439 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25003D26BC3F9C0029C439 /* ImageSaver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		BF25003326B912B20029C439 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF25003526B912B20029C439 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF25003B26BA7E200029C439 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		BF25003D26BC3F9C0029C439 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				BF25002C26B912B00029C439 /* InstafilterApp.swift */,
 				BF25002E26B912B00029C439 /* ContentView.swift */,
+				BF25003D26BC3F9C0029C439 /* ImageSaver.swift */,
 				BF25003B26BA7E200029C439 /* ImagePicker.swift */,
 				BF25003026B912B20029C439 /* Assets.xcassets */,
 				BF25003526B912B20029C439 /* Info.plist */,
@@ -144,6 +147,7 @@
 				BF25003C26BA7E200029C439 /* ImagePicker.swift in Sources */,
 				BF25002F26B912B00029C439 /* ContentView.swift in Sources */,
 				BF25002D26B912B00029C439 /* InstafilterApp.swift in Sources */,
+				BF25003E26BC3F9C0029C439 /* ImageSaver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
