@@ -19,6 +19,7 @@ struct ContentView: View {
     @State private var processedImage: UIImage?
     
     let context = CIContext()
+
     
     var body: some View {
         let intensity = Binding<Double>(
@@ -57,23 +58,24 @@ struct ContentView: View {
                 }.padding(.vertical)
                 
                 HStack {
-                    Button("Change Filter") {
+                    Button(getFilterName()) {
                         self.showingFilterSheet = true
                     }
                     
                     Spacer()
                     
                     Button("Save") {
-                        guard let processedImage = self.processedImage else { return }
-                        
                         let imageSaver = ImageSaver()
+                        
+                        guard let processedImage = self.processedImage else {
+                            imageSaver.errorHandler = {
+                                print("Oops: \($0.localizedDescription)")
+                            }
+                            return
+                        }
                         
                         imageSaver.successHandler = {
                             print("Success!")
-                        }
-                        
-                        imageSaver.errorHandler = {
-                            print("Oops: \($0.localizedDescription)")
                         }
                         
                         imageSaver.writeToPhotoAlbum(image: processedImage)
@@ -132,6 +134,27 @@ struct ContentView: View {
     func setFilter(_ filter: CIFilter) {
         currentFilter = filter
         loadImage()
+    }
+    
+    func getFilterName() -> String {
+        switch currentFilter.name {
+        case "CICrystallize":
+            return "Crystallize"
+        case "CIEdges":
+            return "Edges"
+        case "CIGaussianBlur":
+            return "Gaussian Blur"
+        case "CIPixellate":
+            return "Pixellate"
+        case "CISepiaTone":
+            return "Sepia Tone"
+        case "CIUnsharpMask":
+            return "Unsharp Mask"
+        case "CIVignette":
+            return "Vignette"
+        default:
+            return "Change Filter"
+        }
     }
 }
 
