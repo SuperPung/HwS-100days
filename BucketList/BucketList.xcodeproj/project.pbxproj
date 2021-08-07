@@ -11,6 +11,7 @@
 		BF25004E26BE683D0029C439 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25004D26BE683D0029C439 /* ContentView.swift */; };
 		BF25005026BE683E0029C439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF25004F26BE683E0029C439 /* Assets.xcassets */; };
 		BF25005326BE683E0029C439 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF25005226BE683E0029C439 /* Preview Assets.xcassets */; };
+		BF25005B26BE6BED0029C439 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25005A26BE6BED0029C439 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		BF25004F26BE683E0029C439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF25005226BE683E0029C439 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF25005426BE683E0029C439 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF25005A26BE6BED0029C439 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				BF25004B26BE683D0029C439 /* BucketListApp.swift */,
 				BF25004D26BE683D0029C439 /* ContentView.swift */,
+				BF25005A26BE6BED0029C439 /* MapView.swift */,
 				BF25004F26BE683E0029C439 /* Assets.xcassets */,
 				BF25005426BE683E0029C439 /* Info.plist */,
 				BF25005126BE683E0029C439 /* Preview Content */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF25004E26BE683D0029C439 /* ContentView.swift in Sources */,
+				BF25005B26BE6BED0029C439 /* MapView.swift in Sources */,
 				BF25004C26BE683D0029C439 /* BucketListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
