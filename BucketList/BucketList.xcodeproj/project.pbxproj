@@ -16,6 +16,7 @@
 		BF25005F26BEC72D0029C439 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25005E26BEC72D0029C439 /* EditView.swift */; };
 		BF25006126BEE1260029C439 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25006026BEE1260029C439 /* Result.swift */; };
 		BF25006326BFCF860029C439 /* MKPointAnnotation-Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25006226BFCF860029C439 /* MKPointAnnotation-Codable.swift */; };
+		BF25008526C0F8990029C439 /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25008426C0F8990029C439 /* LockView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BF25005E26BEC72D0029C439 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		BF25006026BEE1260029C439 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		BF25006226BFCF860029C439 /* MKPointAnnotation-Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-Codable.swift"; sourceTree = "<group>"; };
+		BF25008426C0F8990029C439 /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				BF25004B26BE683D0029C439 /* BucketListApp.swift */,
 				BF25004D26BE683D0029C439 /* ContentView.swift */,
+				BF25008426C0F8990029C439 /* LockView.swift */,
 				BF25006026BEE1260029C439 /* Result.swift */,
 				BF25005A26BE6BED0029C439 /* MapView.swift */,
 				BF25005C26BEC6910029C439 /* MKPointAnnotation-ObservableObject.swift */,
@@ -158,6 +161,7 @@
 				BF25004E26BE683D0029C439 /* ContentView.swift in Sources */,
 				BF25005F26BEC72D0029C439 /* EditView.swift in Sources */,
 				BF25005D26BEC6910029C439 /* MKPointAnnotation-ObservableObject.swift in Sources */,
+				BF25008526C0F8990029C439 /* LockView.swift in Sources */,
 				BF25005B26BE6BED0029C439 /* MapView.swift in Sources */,
 				BF25004C26BE683D0029C439 /* BucketListApp.swift in Sources */,
 			);
