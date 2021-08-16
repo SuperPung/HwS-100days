@@ -23,6 +23,20 @@ extension View {
 }
 
 struct ContentView: View {
+    let labels = [
+        "Estonia": "国旗有三个大小相等的横纹。蓝色条纹,中间黑色条纹,底部白色条纹",
+        "France": "国旗有三个同等大小的垂直条纹。留下条纹蓝色,中间白色条纹,条纹的红色",
+        "Germany": "国旗有三个大小相等的横纹。顶级条纹的黑色,中间红色条纹,条纹底黄金",
+        "Ireland": "国旗有三个同等大小的垂直条纹。离开绿色条纹,条纹中间白色,橙色条纹",
+        "Italy": "国旗有三个同等大小的垂直条纹。留下条纹绿色,中间白色条纹,条纹的红色",
+        "Nigeria": "国旗有三个同等大小的垂直条纹。留下条纹绿色,中间白色条纹,条纹绿色",
+        "Poland": "旗帜上写着两个相等大小的横纹。上条纹的白色,下条纹红色",
+        "Russia": "国旗有三个大小相等的横纹。条纹的白色,中间条纹蓝色,底部红色条纹",
+        "Spain": "国旗有三横纹。细条纹的红色,中间粗条纹黄金波峰左边,底部红色细条纹",
+        "UK": "国旗与重叠的红色和白色的十字架,直和对角线,在蓝色的背景上",
+        "US": "国旗的红色和白色条纹大小相等,与白色星星左上角的蓝色背景"
+    ]
+    
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
     @State private var correctAnswer = Int.random(in: 0...2)
     @State private var showingScore = false
@@ -50,6 +64,7 @@ struct ContentView: View {
                         Image(self.countries[number])
                             .renderingMode(.original)
                             .flagImageStyle()
+                            .accessibility(label: Text(self.labels[self.countries[number], default: "未知国旗"]))
                     }
                 }
                 
@@ -65,6 +80,7 @@ struct ContentView: View {
                 self.askQuestion()
             })
         }
+        .environment(\.locale, Locale(identifier: "zh_CN"))
     }
     
     func flagTapped(_ number: Int) {
