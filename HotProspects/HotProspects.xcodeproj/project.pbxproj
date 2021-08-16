@@ -14,6 +14,7 @@
 		BF70260A26CA7AEE00B11349 /* SamplePackage in Frameworks */ = {isa = PBXBuildFile; productRef = BF70260926CA7AEE00B11349 /* SamplePackage */; };
 		BF70260C26CA977600B11349 /* ProspectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70260B26CA977600B11349 /* ProspectsView.swift */; };
 		BF70260E26CA978C00B11349 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70260D26CA978C00B11349 /* MeView.swift */; };
+		BF70261026CA9BEE00B11349 /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70260F26CA9BEE00B11349 /* Prospect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		BF70260226CA471400B11349 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF70260B26CA977600B11349 /* ProspectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsView.swift; sourceTree = "<group>"; };
 		BF70260D26CA978C00B11349 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
+		BF70260F26CA9BEE00B11349 /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				BF7025F926CA471300B11349 /* HotProspectsApp.swift */,
 				BF7025FB26CA471300B11349 /* ContentView.swift */,
+				BF70260F26CA9BEE00B11349 /* Prospect.swift */,
 				BF70260B26CA977600B11349 /* ProspectsView.swift */,
 				BF70260D26CA978C00B11349 /* MeView.swift */,
 				BF7025FD26CA471400B11349 /* Assets.xcassets */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF70260E26CA978C00B11349 /* MeView.swift in Sources */,
+				BF70261026CA9BEE00B11349 /* Prospect.swift in Sources */,
 				BF70260C26CA977600B11349 /* ProspectsView.swift in Sources */,
 				BF7025FC26CA471300B11349 /* ContentView.swift in Sources */,
 				BF7025FA26CA471300B11349 /* HotProspectsApp.swift in Sources */,

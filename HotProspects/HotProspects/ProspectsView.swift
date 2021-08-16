@@ -10,8 +10,11 @@ import SwiftUI
 enum FilterType {
     case none, contacted, uncontacted
 }
+
 struct ProspectsView: View {
     let filter: FilterType
+    @EnvironmentObject var prospects: Prospects
+    
     var title: String {
         switch filter {
         case .none:
@@ -25,8 +28,17 @@ struct ProspectsView: View {
     
     var body: some View {
         NavigationView {
-            Text("Hello, World!")
+            Text("People: \(prospects.people.count)")
                 .navigationBarTitle(title)
+                .navigationBarItems(trailing: Button(action: {
+                    let prospect = Prospect()
+                    prospect.name = "Super Lee"
+                    prospect.emailAddress = "me@superpung.xyz"
+                    self.prospects.people.append(prospect)
+                }) {
+                    Image(systemName: "qrcode.viewfinder")
+                    Text("Scan")
+                })
         }
     }
 }
