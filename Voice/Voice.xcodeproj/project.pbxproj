@@ -110,6 +110,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = BF7025D226CA30F600B11349;
 			productRefGroup = BF7025DC26CA30F600B11349 /* Products */;
