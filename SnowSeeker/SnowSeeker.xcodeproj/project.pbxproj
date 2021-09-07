@@ -14,6 +14,7 @@
 		BF2993B326E765DA002DEEE2 /* resorts.json in Resources */ = {isa = PBXBuildFile; fileRef = BF2993B226E765DA002DEEE2 /* resorts.json */; };
 		BF2993B526E76607002DEEE2 /* Resort.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2993B426E76607002DEEE2 /* Resort.swift */; };
 		BF2993B726E77A9A002DEEE2 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2993B626E77A9A002DEEE2 /* Bundle-Decodable.swift */; };
+		BF2993B926E77F4E002DEEE2 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2993B826E77F4E002DEEE2 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BF2993B226E765DA002DEEE2 /* resorts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resorts.json; sourceTree = "<group>"; };
 		BF2993B426E76607002DEEE2 /* Resort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resort.swift; sourceTree = "<group>"; };
 		BF2993B626E77A9A002DEEE2 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		BF2993B826E77F4E002DEEE2 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				BF2993A326E76058002DEEE2 /* SnowSeekerApp.swift */,
 				BF2993A526E76058002DEEE2 /* ContentView.swift */,
+				BF2993B826E77F4E002DEEE2 /* WelcomeView.swift */,
 				BF2993B426E76607002DEEE2 /* Resort.swift */,
 				BF2993B626E77A9A002DEEE2 /* Bundle-Decodable.swift */,
 				BF2993A726E7605B002DEEE2 /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF2993B926E77F4E002DEEE2 /* WelcomeView.swift in Sources */,
 				BF2993A626E76058002DEEE2 /* ContentView.swift in Sources */,
 				BF2993B526E76607002DEEE2 /* Resort.swift in Sources */,
 				BF2993A426E76058002DEEE2 /* SnowSeekerApp.swift in Sources */,
