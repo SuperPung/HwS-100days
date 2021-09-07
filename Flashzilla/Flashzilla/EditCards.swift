@@ -39,6 +39,7 @@ struct EditCards: View {
             .listStyle(GroupedListStyle())
             .onAppear(perform: loadData)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     func dismiss() {
@@ -59,7 +60,7 @@ struct EditCards: View {
         }
     }
     
-    func addCards() {
+    func addCard() {
         let trimmedPrompt = newPrompt.trimmingCharacters(in: .whitespaces)
         let trimmedAnswer = newAnswer.trimmingCharacters(in: .whitespaces)
         guard trimmedPrompt.isEmpty == false && trimmedAnswer.isEmpty == false else { return }
